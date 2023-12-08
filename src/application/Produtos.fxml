@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProdutosController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1001.0" opacity="0.72">
+         <image>
+            <Image url="@../../../../Desktop/Prova/o-ceu-noturno-brilha-com-iridescente-ia-generativa-do-espaco-profundo(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="438.0" layoutY="14.0" prefHeight="48.0" prefWidth="169.0" text="PRODUTOS" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="121.0" text="Nome:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="nomeid" layoutX="121.0" layoutY="119.0" prefHeight="26.0" prefWidth="293.0" />
+      <Label layoutX="52.0" layoutY="186.0" text="Preço:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="precoid" layoutX="121.0" layoutY="184.0" prefHeight="26.0" prefWidth="293.0" />
+      <Label layoutX="36.0" layoutY="258.0" text="Descrição:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="descricaoid" layoutX="121.0" layoutY="256.0" prefHeight="26.0" prefWidth="293.0" />
+      <Pane layoutX="74.0" layoutY="450.0" prefHeight="101.0" prefWidth="316.0">
+         <children>
+            <Label layoutX="39.0" layoutY="48.0" text="ID:" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idid" layoutX="83.0" layoutY="29.0" onKeyReleased="#search" prefHeight="54.0" prefWidth="194.0" />
+         </children>
+      </Pane>
+      <Button layoutX="50.0" layoutY="341.0" mnemonicParsing="false" onAction="#salvar" prefHeight="63.0" prefWidth="112.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="175.0" layoutY="341.0" mnemonicParsing="false" onAction="#sair" prefHeight="63.0" prefWidth="112.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Sair" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <Button layoutX="302.0" layoutY="341.0" mnemonicParsing="false" onAction="#limpar" prefHeight="63.0" prefWidth="112.0" style="-fx-background-color: trasparent; -fx-border-color: white; -fx-border-radius: 20;" text="Limpar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="490.0" layoutY="450.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="87.0" prefWidth="112.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Atualizar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="629.0" layoutY="450.0" mnemonicParsing="false" onAction="#deletar" prefHeight="87.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Deletar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="766.0" layoutY="450.0" mnemonicParsing="false" onAction="#voltar" prefHeight="87.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <TableView fx:id="tableid" layoutX="462.0" layoutY="112.0" prefHeight="313.0" prefWidth="470.0">
+        <columns>
+          <TableColumn fx:id="ident" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nometid" prefWidth="119.0" text="NOME" />
+            <TableColumn fx:id="precotid" prefWidth="86.0" text="PREÇO" />
+            <TableColumn fx:id="precotid1" prefWidth="188.0" text="DESCRIÇÃO" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

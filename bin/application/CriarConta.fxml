@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1001.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CriarContaController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1001.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/Prova/o-ceu-noturno-brilha-com-iridescente-ia-generativa-do-espaco-profundo(1).jpg" />
+         </image></ImageView>
+      <Label layoutX="434.0" layoutY="14.0" prefHeight="48.0" prefWidth="194.0" text=" Criar Conta" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="85.0" text="Nome:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="nmid" layoutX="116.0" layoutY="83.0" prefHeight="26.0" prefWidth="301.0" />
+      <Label layoutX="48.0" layoutY="141.0" text="Senha:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Label>
+      <PasswordField fx:id="senhaid" layoutX="116.0" layoutY="139.0" prefHeight="26.0" prefWidth="301.0" />
+      <Label layoutX="47.0" layoutY="200.0" text="E-mail:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="emailid" layoutX="116.0" layoutY="198.0" prefHeight="26.0" prefWidth="301.0" />
+      <Label layoutX="51.0" layoutY="258.0" text="CPF:" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cpfid" layoutX="115.0" layoutY="256.0" prefHeight="26.0" prefWidth="301.0" />
+      <Pane layoutX="73.0" layoutY="421.0" prefHeight="93.0" prefWidth="318.0">
+         <children>
+            <Label layoutX="42.0" layoutY="33.0" text="ID:" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idid" layoutX="96.0" layoutY="20.0" onKeyReleased="#search" prefHeight="54.0" prefWidth="194.0" style="-fx-background-radius: 20;" />
+         </children>
+      </Pane>
+      <Button layoutX="59.0" layoutY="332.0" mnemonicParsing="false" onAction="#salvar" prefHeight="63.0" prefWidth="112.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="184.0" layoutY="332.0" mnemonicParsing="false" onAction="#sair" prefHeight="63.0" prefWidth="112.0" style="-fx-background-color: trasnsparent; -fx-border-color: white; -fx-border-radius: 20;" text="Sair" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="311.0" layoutY="332.0" mnemonicParsing="false" onAction="#limpar" prefHeight="63.0" prefWidth="112.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Limpar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="497.0" layoutY="421.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="87.0" prefWidth="112.0" style="-fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: white;" text="Atualizar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="638.0" layoutY="421.0" mnemonicParsing="false" onAction="#deletar" prefHeight="87.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Deletar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="783.0" layoutY="421.0" mnemonicParsing="false" onAction="#voltar" prefHeight="87.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Button>
+      <TableView fx:id="tableid" layoutX="463.0" layoutY="100.0" prefHeight="313.0" prefWidth="470.0">
+        <columns>
+          <TableColumn fx:id="ident" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nomeid" prefWidth="108.0" text="Nome" />
+            <TableColumn fx:id="edicaoid" prefWidth="103.0" text="Senha" />
+            <TableColumn fx:id="precoid" prefWidth="91.0" text="E-mail" />
+            <TableColumn fx:id="precoid1" prefWidth="91.0" text="CPF" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
